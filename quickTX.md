@@ -27,13 +27,13 @@ When a wallet quickTX transaction is successfully locked a shell command provide
 
 Details pertaining to an observed "Transaction Lock" can also be retrieved through RPC, it’s important however to understand the underlying mechanism.
 
-By default, the LNI Core daemon will launch using the following constant:
+By default, the Loonie Core daemon will launch using the following constant:
 
 ```
 static const int DEFAULT_QUICKTX_DEPTH = 5;
 ```
 
-This value can be overridden by passing the following argument to the LNI Core daemon:
+This value can be overridden by passing the following argument to the Loonie Core daemon:
 
 ```
 -quicktxdepth=<n>

@@ -1,6 +1,6 @@
 <!--- Remove this description and sections that do not apply -->
 
-This issue tracker is only for technical issues related to LNI Core.
+This issue tracker is only for technical issues related to Loonie Core.
 General LNI questions and/or support requests and are best directed to the [LNI Slack](http://loonie.slack.com).
 
 ### Describe the issue
@@ -20,7 +20,7 @@ Tell us what happens instead
 ### Screenshots.
 If the issue is related to the GUI, screenshots can be added to this issue via drag & drop.
 
-### What version of LNI Core are you using?
+### What version of Loonie Core are you using?
 List the version number/commit ID, and if it is an official binary, self compiled or a distribution package.
 
 ### Machine specs:

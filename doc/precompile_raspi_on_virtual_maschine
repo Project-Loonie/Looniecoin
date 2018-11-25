@@ -2,7 +2,7 @@
 variant suggested by davembg
 https://bitcointalk.org/index.php?topic=580725.msg27132527#msg27132527
 
-building the LNI wallet on the RPi can take forever and fail multiple times before succeeding (if ever).
+building the Loonie *wallet on the RPi can take forever and fail multiple times before succeeding (if ever).
 I recommend using the depends toolkit and building the ARM/RASPi wallet on Debian 9 (VM or install).
 Then, you just need a Raspberry Pi with Raspbian installed, and you can copy the wallet with no dependencies.
 https://www.raspberrypi.org/downloads/raspbian/
@@ -15,11 +15,11 @@ Install the build environment dependencies for the Raspberry Pi -
 Code:
 sudo apt install build-essential libtool autotools-dev autoconf pkg-config curl gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
 
-build the dependencies for the LNI wallet without the GUI (cli only) building for QT needs work -
+build the dependencies for the Loonie *wallet without the GUI (cli only) building for QT needs work -
 Code:
 cd depends && make HOST=aarch64-linux-gnu NO_QT=1
 
-Change back to the LNI root directory
+Change back to the Loonie *root directory
 Code:
 cd ..
 

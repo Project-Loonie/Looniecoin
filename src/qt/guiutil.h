@@ -30,7 +30,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the LNI Qt UI.
+/** Utility functions used by the Loonie *Qt UI.
  */
 namespace GUIUtil
 {
@@ -38,7 +38,7 @@ namespace GUIUtil
 QString dateTimeStr(const QDateTime& datetime);
 QString dateTimeStr(qint64 nTime);
 
-// Render LNI addresses in monospace font
+// Render Loonie addresses in monospace font
 QFont bitcoinAddressFont();
 
 // Set up widgets for address and amounts

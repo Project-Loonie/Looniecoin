@@ -13,7 +13,7 @@
  * for both loonied and loonie-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("LNI Core");
+const std::string CLIENT_NAME("Loonie Core");
 
 /**
  * Client version number

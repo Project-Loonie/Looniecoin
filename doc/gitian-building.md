@@ -3,7 +3,7 @@ Gitian building
 
 *Setup instructions for a gitian build of LNI using a Debian VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the LNI
+Gitian is the deterministic build process that is used to build the Loonie *
 Core executables. It provides a way to be reasonably sure that the
 executables are really built from source on GitHub. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.

@@ -8,7 +8,7 @@ written by: shinebright
 2. The compilation process described herein was based on the Broadcom BMC2835 (ARMv6) architecture, available in the following Pi models: 2, B, B+, A, A+, zero, and zero W.
 3. Newer Pi models based on the BMC2836 (Pi2) and  BMC2837 (Pi3) architectures are supposed to be backwards compatible, and therefore should also be capable of compiling the wallet, as long as the recommended Raspbian OS version and software packages described in this guide are used. 
 4. Although Pi models with 256Mb RAM should be equally capable of compiling the wallet, the process can be very lengthy and may take several hours, or even days.
-5. This document will guide you in the installation of the wallet, nothing more. It is not, and does not intend to be, an official wallet release. The author of the guide or the LNI Development Team should NOT be held responsible for any loss of LNI funds as a consequence of improper wallet compilation. In short, use the guide at your own risk!
+5. This document will guide you in the installation of the wallet, nothing more. It is not, and does not intend to be, an official wallet release. The author of the guide or the Loonie *Development Team should NOT be held responsible for any loss of LNI funds as a consequence of improper wallet compilation. In short, use the guide at your own risk!
 6. As a safety measure, it is strongly recommended that you make transfer tests with smaller coin amounts to ensure you have a fulling working wallet, prior to managing larger LNI amounts.
 7. If you enconter any dificulties along the compilation process, please PM user shinebright on LNI’s Slack group, and I’ll be glad to help you anyway I can. Please note that I’m no TI expert, just a LNI user with lots of interest in low power consumption staking with the most solid and rewarding cryptocoin!
 
@@ -151,7 +151,7 @@ Next, you need to install the compilation dependency packages
 Navigate to your home directory
 `cd`
 
-Clone the LNI wallet into your home folder
+Clone the Loonie *wallet into your home folder
 `git clone https://github.com/Project-Loonie/Looniecoin.git`
 
 This will create the Loonie folder inside your home directory
@@ -224,15 +224,15 @@ You should get the following message `LNI server starting`
 
 You may receive an error message regarding rpcuser and rpcpassword. This is perfectly normal (we will sort this our in step 20).
 
-Since this is the first time the wallet is iniated, the Loonie wallet configuration folder (.LNIV3) will be freshly created with all configuration files inside it.
+Since this is the first time the wallet is iniated, the Loonie wallet configuration folder (.Loonie) will be freshly created with all configuration files inside it.
 
 If the system hasn't exit the daemon automatically, you can now stop it by hitting Control + C, so we can edit the configuration files (full blockchain synching will be performed later).
 
 ## 20.Edit the config file
 
-Navigate to the .LNIV3 folder
+Navigate to the .Loonie folder
 `cd`
-`cd .LNIV3`
+`cd .Loonie`
 
 Open the loonie.conf file
 `sudo nano loonie.conf`
@@ -341,17 +341,17 @@ This may take a few seconds. Make sure you choose a strong, long passphrase. Be 
 
 Check if the blockchain is fully sync'ed, by verifying if the block number matches the latest found here: https://chainz.cryptoid.info/dmd/# 
 
-If you're using the Pi as a desktop computer with monitor and keyboard, all you have to do is copy the wallet.dat file from the .LNIV3 folder into a pendrive and secure it in a safe place.
+If you're using the Pi as a desktop computer with monitor and keyboard, all you have to do is copy the wallet.dat file from the .Loonie folder into a pendrive and secure it in a safe place.
 
 If using the Pi as headless client with a Mac or Linux main computer, you will use 'scp' to copy files over the network. This software should be previously installed in most Mac and Linux distributions
-`scp USERNAME@ADDRESS:~/.LNIV3/wallet.dat ~/`
+`scp USERNAME@ADDRESS:~/.Loonie/wallet.dat ~/`
 
 This will copy wallet.dat to your home folder
 
 If using a Windows PC, first you need to download pscp from the putty homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
 
 After installation, you should be able to transfer your wallet file over the network to your main computer
-`pscp USERNAME@ADDRESS:~/.LNIV3/wallet.dat C:\Users\YOURNAME\Downloads\`
+`pscp USERNAME@ADDRESS:~/.Loonie/wallet.dat C:\Users\YOURNAME\Downloads\`
 
 This will copy wallet.dat to your Downloads folder (make sure you replace YOURNAME by your windows username). Remember to secure the file in a safe place afterwards.
 
@@ -364,7 +364,7 @@ If you wish to stake, you first need to stop the client.
 
 Open the loonie.conf file
 `cd`
-`cd .LNIV3`
+`cd .Loonie`
 `sudo nano loonie.conf`
 
 Change the line `staking=0` to `staking=1`
@@ -389,6 +389,6 @@ You will need to know additional commands to manage your LNI funds. There are 2 
 `./loonie-cli help`
 `./loonie-cli --help`
 
-If you find this guide helpful, please consider donating to my LNI address: dEDEPoPDcf6RhABkEXttPzzwBX5SMTjiYU
+If you find this guide helpful, please consider donating to my Loonie address: dEDEPoPDcf6RhABkEXttPzzwBX5SMTjiYU
 
 Enjoy your Loonie wallet and happy staking!

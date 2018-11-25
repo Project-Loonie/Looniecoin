@@ -30,7 +30,7 @@ static const char UNUSED* loonie_strings[] = {
                                    "notation for IPv6. This option can be specified multiple times (default: "
                                    "bind to all interfaces)"),
     QT_TRANSLATE_NOOP("loonie-core", ""
-                                   "Cannot obtain a lock on data directory %s. LNI Core is probably already "
+                                   "Cannot obtain a lock on data directory %s. Loonie Core is probably already "
                                    "running."),
     QT_TRANSLATE_NOOP("loonie-core", ""
                                    "Change automatic finalized budget voting behavior. mode=auto: Vote for only "
@@ -162,7 +162,7 @@ static const char UNUSED* loonie_strings[] = {
                                    "It is also recommended to set alertnotify so you are notified of problems;\n"
                                    "for example: alertnotify=echo %%s | mail -s \"LNI Alert\" admin@foo.com\n"),
     QT_TRANSLATE_NOOP("loonie-core", ""
-                                   "Unable to bind to %s on this computer. LNI Core is probably already running."),
+                                   "Unable to bind to %s on this computer. Loonie Core is probably already running."),
     QT_TRANSLATE_NOOP("loonie-core", ""
                                    "Unable to locate enough mixTX denominated funds for this transaction."),
     QT_TRANSLATE_NOOP("loonie-core", ""
@@ -182,7 +182,7 @@ static const char UNUSED* loonie_strings[] = {
                                    "pay if you send a transaction."),
     QT_TRANSLATE_NOOP("loonie-core", ""
                                    "Warning: Please check that your computer's date and time are correct! If "
-                                   "your clock is wrong LNI Core will not work properly."),
+                                   "your clock is wrong Loonie Core will not work properly."),
     QT_TRANSLATE_NOOP("loonie-core", ""
                                    "Warning: The network does not appear to fully agree! Some miners appear to "
                                    "be experiencing issues."),
@@ -236,7 +236,7 @@ static const char UNUSED* loonie_strings[] = {
     QT_TRANSLATE_NOOP("loonie-core", "Connection options:"),
     QT_TRANSLATE_NOOP("loonie-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
     QT_TRANSLATE_NOOP("loonie-core", "Copyright (C) 2014-%i The Dash and PIVX Core Developers"),
-    QT_TRANSLATE_NOOP("loonie-core", "Copyright (C) 2015-%i The LNI Core Developers"),
+    QT_TRANSLATE_NOOP("loonie-core", "Copyright (C) 2015-%i The Loonie Core Developers"),
     QT_TRANSLATE_NOOP("loonie-core", "Corrupted block database detected"),
     QT_TRANSLATE_NOOP("loonie-core", "Could not parse -rpcbind value %s as network address"),
     QT_TRANSLATE_NOOP("loonie-core", "Could not parse masternode.conf"),
@@ -254,7 +254,7 @@ static const char UNUSED* loonie_strings[] = {
     QT_TRANSLATE_NOOP("loonie-core", "Error loading block database"),
     QT_TRANSLATE_NOOP("loonie-core", "Error loading wallet.dat"),
     QT_TRANSLATE_NOOP("loonie-core", "Error loading wallet.dat: Wallet corrupted"),
-    QT_TRANSLATE_NOOP("loonie-core", "Error loading wallet.dat: Wallet requires newer version of LNI Core"),
+    QT_TRANSLATE_NOOP("loonie-core", "Error loading wallet.dat: Wallet requires newer version of Loonie Core"),
     QT_TRANSLATE_NOOP("loonie-core", "Error opening block database"),
     QT_TRANSLATE_NOOP("loonie-core", "Error reading from database, shutting down."),
     QT_TRANSLATE_NOOP("loonie-core", "Error recovering public key."),
@@ -282,7 +282,7 @@ static const char UNUSED* loonie_strings[] = {
     QT_TRANSLATE_NOOP("loonie-core", "Incompatible version."),
     QT_TRANSLATE_NOOP("loonie-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
     QT_TRANSLATE_NOOP("loonie-core", "Information"),
-    QT_TRANSLATE_NOOP("loonie-core", "Initialization sanity check failed. LNI Core is shutting down."),
+    QT_TRANSLATE_NOOP("loonie-core", "Initialization sanity check failed. Loonie Core is shutting down."),
     QT_TRANSLATE_NOOP("loonie-core", "Input is not valid."),
     QT_TRANSLATE_NOOP("loonie-core", "Insufficient funds."),
     QT_TRANSLATE_NOOP("loonie-core", "Invalid -onion address: '%s'"),
@@ -426,7 +426,7 @@ static const char UNUSED* loonie_strings[] = {
     QT_TRANSLATE_NOOP("loonie-core", "Verifying wallet..."),
     QT_TRANSLATE_NOOP("loonie-core", "Wallet %s resides outside data directory %s"),
     QT_TRANSLATE_NOOP("loonie-core", "Wallet is locked."),
-    QT_TRANSLATE_NOOP("loonie-core", "Wallet needed to be rewritten: restart LNI Core to complete"),
+    QT_TRANSLATE_NOOP("loonie-core", "Wallet needed to be rewritten: restart Loonie Core to complete"),
     QT_TRANSLATE_NOOP("loonie-core", "Wallet options:"),
     QT_TRANSLATE_NOOP("loonie-core", "Wallet window title"),
     QT_TRANSLATE_NOOP("loonie-core", "Warning"),

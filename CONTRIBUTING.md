@@ -1,7 +1,7 @@
-Contributing to LNI Core
+Contributing to Loonie Core
 ============================
 
-The LNI Core project operates an open contributor model where anyone is
+The Loonie Core project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -157,10 +157,10 @@ where possible keep them short, un-complex and easy to verify.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the LNI Core project, and is not to be
+The following applies to code changes to the Loonie Core project, and is not to be
 confused with overall LNI Network Protocol consensus changes.
 
-Whether a pull request is merged into LNI Core rests with the project merge
+Whether a pull request is merged into Loonie Core rests with the project merge
 maintainers and ultimately the project lead.
 
 Maintainers will take into consideration if a patch is in line with the general
@@ -214,7 +214,7 @@ higher in terms of discussion and peer review requirements, keeping in mind that
 mistakes could be very costly to the wider community. This includes refactoring
 of consensus critical code.
 
-Where a patch set proposes to change the LNI consensus, it must have been
+Where a patch set proposes to change the Loonie *consensus, it must have been
 discussed extensively on the forums and Slack, be accompanied by a widely
 discussed Proposal and have a generally widely perceived technical consensus of being
 a worthwhile change based on the judgement of the maintainers.
@@ -254,7 +254,7 @@ about:
 Release Policy
 --------------
 
-The project leader is the release manager for each LNI Core release.
+The project leader is the release manager for each Loonie Core release.
 
 Copyright
 ---------

@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers 
-// Copyright (c) 2015-2017 The LNI Loonie developers
+// Copyright (c) 2015-2017 The Loonie developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1676,7 +1676,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         if (nHeight < 200)
             return 0;
     }
-	// LNI3 65% for Masternodes
+	// Loonie 65% for Masternodes
 	ret = blockValue  / 100 * 65;
     return ret;
 }

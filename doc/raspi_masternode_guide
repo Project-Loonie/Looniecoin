@@ -5,7 +5,7 @@ LNI v3 Wallet Masternode on Raspberry Pi 2 Model B
 SOURCES
 I rewrite the tutorial from Christian (BitSend).
 SPEED OF THE PI2
-The compiling of the needed file for the LNI wallet/master node takes about 1.5/2h until done. 
+The compiling of the needed file for the Loonie *wallet/master node takes about 1.5/2h until done. 
 The PI2 has an ARM kernel. So just downloading the 32bit version just doesnt cut it....
 PREREQUISITES?
 1. A raspberry Pi 2 model B
@@ -45,7 +45,7 @@ In the menu's somewhere there is a list of connected devices. They all have a IP
 Somewhere in the menus of your router you can do a DHCP reservation for the IP address of the PI2. This means everytime the PI2 boots it gets the same IPaddress. Thats what we want. We dont want it to change. Dunno your router so cannot help on this one :( Check manual or do a search on it. You should find some other tutorials.)
 Now also somewhere in the menu of the router there is a NAT or PORT FORWARD menu. Enter the IPaddress of the PI2 and open port 33447. Usally by just filling all portboxes with 33447, IN / OUT etc. Maybe you just have one box to put it in.
 Save the config of the router and reboot it. (also in the menus somewhere)
-You are now re-routes internet traffic on port 33447 (the LNI p2p port) to your Pi2.
+You are now re-routes internet traffic on port 33447 (the Loonie *p2p port) to your Pi2.
 Check http://www.yougetsignal.com/tools/open-ports/ and fill in port 33447 to find it open.
 7. Putty for a terminalconnection
 Now head to your desktop and download putty at www.chiark.greenend.org.uk/~sgtatham/putty/download.html. Take the top one Intel x86/32bit is fine.
@@ -129,7 +129,7 @@ cd db-4.8.30.NC/build_unix/
 #  Note: Do a static build so that it can be embedded into the exectuable, instead of having to find a .so at runtime
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
 make install
-# Configure LNI Core to use our own-built instance of BDB
+# Configure Loonie Core to use our own-built instance of BDB
 cd $LNI_ROOT
 ./autogen.sh
 ./configure --enable-cxx --disable-shared --without-gui LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/ -O2"
@@ -173,9 +173,9 @@ For added security, it is recommended to make this file "Read Only" so no one ca
 chmod 444 masternode.conf loonie.conf
 NOTE1: rpcuser and rpcpassword can be anything, you DONT have to remember them later. Only use letters and numbers.
 NOTE2: Check and recheck. it usually goes wrong here with a typo.
-To preset some settings to make it work we make a directory called .LNIV3 and enter it with:
-mkdir .LNIV3
-cd .LNIV3
+To preset some settings to make it work we make a directory called .Loonie and enter it with:
+mkdir .Loonie
+cd .Loonie
 NOTE: this is the workingdirectory of the masternode. Its there, but hidden.
 make symbolic links to the both files in the working directory for easy usage
 ln -s /root/loonie.conf loonie.conf
@@ -186,7 +186,7 @@ cd ..
 Run your loonie daemon for the first time:
 loonied
 You will see the message like "Server Starting". It will now startup and configure itself. Also it will go download the blockchain. This will take some time, and only happens once. Check if files are being made with:
-cd .LNIV3
+cd .Loonie
 ls
 (check if there is more then that config file you made earlier made)
 cd ..
@@ -201,9 +201,9 @@ Check the blockcount and check if its the same at https://chainz.cryptoid.info/d
 loonie-cli masternode genkey
 NOTE: Dont worry, this is not a key to get to your 10000 loonie. They are still safe in your local wallet protected with its own privatekey.
 Select the generated string with your mouse. You dont need to copy it. Dragging mouse copies it automaticly.
-Stop the the masternode and enter the hidden .LNIV3 directory again and edit the configfile:
+Stop the the masternode and enter the hidden .Loonie directory again and edit the configfile:
 loonie-cli stop
-cd .LNIV3
+cd .Loonie
 joe loonie.conf
 Delete the long XXXXXXX-string and paste the string with a right mousebutton click on the putty screen. Also change masternode=0 to masternode=1 and save n quit with CONTROL - K then CONTROL - X
 enter the XXXXXXX-string to the masternode configuration file too 
@@ -222,7 +222,7 @@ If anything else its NOT working ok. use this only if you end this tutorial.
 loonie-cli masternode list | grep collateral_output_txid
 Check if your ip is red and the line ends with a 1 like: "YOUREXTERNALIPADDRESS:33447" : 1. Then you know its connectes and seen on the network.
 CONGRATS SO FAR! THE HARD WORK IS DONE! 
-for currently configuring the masternode please read also the masternodeguides of cryptonid or ask on the LNI Slack forum for support.
+for currently configuring the masternode please read also the masternodeguides of cryptonid or ask on the Loonie *Slack forum for support.
 collateral_output_txid      is the transaction id of the transaction where the 10000 LNI deposit sended to your masternode wallet
 collateral_output_index     is the index of the deposit transaction
 

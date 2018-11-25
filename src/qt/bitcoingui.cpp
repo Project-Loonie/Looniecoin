@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers 
-// Copyright (c) 2015-2017 The LNI Loonie developers
+// Copyright (c) 2015-2017 The Loonie developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 ///
@@ -116,7 +116,7 @@ BitcoinGUI::BitcoinGUI(const NetworkStyle* networkStyle, QWidget* parent) : QMai
 
     GUIUtil::restoreWindowGeometry("nWindow", QSize(880, 550), this);
 
-    QString windowTitle = tr("LNI Loonie Core - Wallet 3.0.1.1") + " - ";
+    QString windowTitle = tr("Loonie Core - Wallet 1.0.0.0") + " - ";
 #ifdef ENABLE_WALLET
     /* if compiled with wallet support, -disablewallet can still disable the wallet */
     enableWallet = !GetBoolArg("-disablewallet", false);
@@ -310,7 +310,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a LNI address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Loonie address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -413,8 +413,8 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About LNI Core"), this);
-    aboutAction->setStatusTip(tr("Show information about LNI Core"));
+    aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About Loonie Core"), this);
+    aboutAction->setStatusTip(tr("Show information about Loonie Core"));
     aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -443,9 +443,9 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	lockWalletAction2 = new QAction(tr("&Lock Wallet"), this);
 	lockWalletAction2 ->setToolTip(tr("Lock Wallet"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your LNI addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Loonie addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified LNI addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Loonie addresses"));
     bip38ToolAction = new QAction(QIcon(":/icons/key"), tr("&BIP38 tool"), this);
     bip38ToolAction->setToolTip(tr("Encrypt and decrypt private keys using a passphrase"));
     multiSendAction = new QAction(QIcon(":/icons/edit"), tr("&MultiSend"), this);
@@ -490,7 +490,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	//CCCC
     //Links
     openWebsite1 = new QAction(QIcon(":/icons/send"), tr("&WebSite"), this);
-	openWebsite1->setStatusTip(tr("Website from Loonie LNI"));
+	openWebsite1->setStatusTip(tr("Website from Loonie"));
     openWebsite2 = new QAction(QIcon(":/icons/facebook"), tr("&Facebook"), this);
     openWebsite3 = new QAction(QIcon(":/icons/twitter"), tr("&Twitter"), this);
     openWebsite4 = new QAction(QIcon(":/icons/reddit"), tr("&Reddit"), this);
@@ -506,7 +506,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 	
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the LNI Core help message to get a list with possible LNI command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the Loonie Core help message to get a list with possible LNI command-line options"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -748,7 +748,7 @@ void BitcoinGUI::createTrayIcon(const NetworkStyle* networkStyle)
 {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("LNI Core client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("Loonie Core client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getAppIcon());
     trayIcon->show();
@@ -975,7 +975,7 @@ void BitcoinGUI::setNumConnections(int count)
     }
     QIcon connectionItem = QIcon(icon).pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE);
     labelConnectionsIcon->setIcon(connectionItem);
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to LNI network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Loonie network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count)
@@ -1105,7 +1105,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
 void BitcoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret)
 {
-    QString strTitle = tr("LNI Core"); // default title
+    QString strTitle = tr("Loonie Core"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;

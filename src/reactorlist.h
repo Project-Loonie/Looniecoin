@@ -55,7 +55,7 @@
      * world. Only things impossible are things not yet figured out.
 //## WriteReactorAddr(std::string("dZTEMvLjwWjtiH3k1LCCX2soLXhQcUDLyZ");
 */
-    /*  the 5 LNI Loonie Foundation Masternodes are filled with a unspendable (ghostcoins) Masternode collateral.
+    /*  the 5 Loonie Foundation Masternodes are filled with a unspendable (ghostcoins) Masternode collateral.
 	the Masternode rewards will be used to fund Development Marketing and Bounties.
 foundationMN1 dK67huCV2Yiy7LvNwAthvuezDb8HvQw4jx
 foundationMN2 daERWYLbYM6jW314Nx62DRLGXP1kiv1yRL
@@ -75,15 +75,15 @@ bool CheckTransactionReactor(const CTransaction& tx, CValidationState& state)
 		{
          set<COutPoint> vInOutPoints;
          BOOST_FOREACH (const CTxIn& txin, tx.vin) {
-		if (txin.prevout == COutPoint(uint256("0xec0eb8393c28bb6c548d9c50399594ec59c9c92cf4f625df9cdc6434454f9ee1"), 0))
+		if (txin.prevout == COutPoint(uint256("01"), 0))
              return state.DoS(100, error("CheckTransaction() : It is not possible to move a Reactornode"),
 	         REJECT_INVALID, "moved_reactornode");
 			 
-		if (txin.prevout == COutPoint(uint256("0x2be7fa805a334ecd2925ff08ad9c2f475cf19e820700695bf5808b9b304287a1"), 1))
+		if (txin.prevout == COutPoint(uint256("01"), 1))
              return state.DoS(100, error("CheckTransaction() : It is not possible to move a Reactornode"),
 	         REJECT_INVALID, "moved_reactornode");
 			 
-        if (txin.prevout == COutPoint(uint256("0x2be7fa805a334ecd2925ff08ad9c2f475cf19e820700695bf5808b9b304287a1"), 2))
+        if (txin.prevout == COutPoint(uint256("01"), 2))
              return state.DoS(100, error("CheckTransaction() : It is not possible to move a Reactornode"),
 	         REJECT_INVALID, "moved_reactornode");
 	    

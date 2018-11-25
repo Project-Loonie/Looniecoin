@@ -16,7 +16,7 @@ BITCOIND_USER=${BITCOIND_USER:-loonie}
 BITCOIND_GROUP=${BITCOIND_GROUP:-loonie}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/loonied}
 
-name="LNI Core Daemon"
+name="Loonie Core Daemon"
 description="LNI crypto-currency p2p network daemon"
 
 command="/usr/bin/loonied"

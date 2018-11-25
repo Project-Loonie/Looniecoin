@@ -2,7 +2,7 @@ Copyright (C) 2009 -until todayThe Bitcoin Core Developers
 Copyright (C) 2015 -until today The Dash and PIVX Core Developers
 Copyright (C) 2017 -until todayThe BTDX Core Developers
 
-LNI Core integration/staging repository
+Loonie Core integration/staging repository
 =====================================
 
 [![Build Status](https://travis-ci.org/LNI-Project/LNI.svg?branch=master)](https://travis-ci.org/LNI-Project/LNI) [![GitHub version](https://badge.fury.io/gh/LNI-Project%2FLNI.svg)](https://badge.fury.io/gh/LNI-Project%2FLNI)

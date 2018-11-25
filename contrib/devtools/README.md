@@ -36,7 +36,7 @@ couldn't mess with the sources.
 
 Setup
 ---------
-Configuring the github-merge tool for the LNI repository is done in the following way:
+Configuring the github-merge tool for the Loonie *repository is done in the following way:
 
     git config githubmerge.repository LNI-Project/LNI
     git config githubmerge.testcmd "make -j4 check" (adapt to whatever you want to use for testing)
@@ -45,7 +45,7 @@ Configuring the github-merge tool for the LNI repository is done in the followin
 optimize-pngs.py
 ================
 
-A script to optimize png files in the LNI
+A script to optimize png files in the Loonie *
 repository (requires pngcrush).
 
 fix-copyright-headers.py

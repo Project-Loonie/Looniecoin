@@ -30,10 +30,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start LNI after logging in to the system.</string>
+          <string>Automatically start Loonie after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start LNI on system login</string>
+          <string>&amp;Start Loonie on system login</string>
          </property>
         </widget>
        </item>
@@ -268,7 +268,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the LNI client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Loonie *client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -288,7 +288,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the LNI network through a SOCKS5 proxy.</string>
+          <string>Connect to the Loonie network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
