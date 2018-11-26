@@ -111,7 +111,7 @@ void setupAddressWidget(QValidatedLineEdit* widget, QWidget* parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Loonie address (e.g. %1)").arg("D7VFR83SQbiezrW72hjcWJtcfip5krte2Z"));
+    widget->setPlaceholderText(QObject::tr("Enter a Loonie address (e.g. %1)").arg("LVthn6oPwLRGZk2iAu226xkQURGEMkui5K"));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -384,19 +384,19 @@ void showBackups()
 }
 
 ///CCCC
-void hyperlinks_slot1(){QString link1 = "https://bit.loonies/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot2(){QString link1 = "https://www.facebook.com/dmdcoin/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot3(){QString link1 = "https://twitter.com/dmdcoin"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot4(){QString link1 = "https://www.reddit.com/r/dmd"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot5(){QString link1 = "https://discord.gg/bqM78c9"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot6(){QString link1 = "https://bit.loonies/contact.php"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot7(){QString link1 = "https://dmdcoin.slack.com/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot8(){QString link1 = "https://bitcointalk.org/index.php?topic=580725.0"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks_slot9(){QString link1 = "https://github.com/Project-Loonie/Loonie"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot1(){QString link1 = "https://loonienetwork.online/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot2(){QString link1 = "https://www.facebook.com/ProjectLoonie/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot3(){QString link1 = "https://twitter.com/LoonieNetwork"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot4(){QString link1 = "https://www.reddit.com/r/LoonieNetwork"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot5(){QString link1 = "https://discord.gg/R5KxnR7"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot6(){QString link1 = "https://loonienetwork.online"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot7(){QString link1 = "#"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot8(){QString link1 = " https://bitcointalk.org/index.php?topic=5034870"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks_slot9(){QString link1 = "https://github.com/Project-Loonie/Looniecoin"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
 
-void hyperlinks2_slot1(){QString link1 = "https://bittrex.com/Market/Index?MarketName=BTC-LNI"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks2_slot1(){QString link1 = "https://bittrex.com/Market/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
 void hyperlinks2_slot2(){QString link1 = "https://www.livecoin.net/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
-void hyperlinks2_slot3(){QString link1 = "https://wallet.crypto-bridge.org/market/BRIDGE.LNI_BRIDGE.BTC"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
+void hyperlinks2_slot3(){QString link1 = "https://wallet.crypto-bridge.org/market/"; QDesktopServices::openUrl(QUrl(link1, QUrl::TolerantMode));}
 
 void SubstituteFonts(const QString& language)
 {
