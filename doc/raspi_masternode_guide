@@ -9,7 +9,7 @@ The compiling of the needed file for the Loonie *wallet/master node takes about 
 The PI2 has an ARM kernel. So just downloading the 32bit version just doesnt cut it....
 PREREQUISITES?
 1. A raspberry Pi 2 model B
-2. 10000 LNI
+2. 50000 LNI
 3. Unlimited data from your ISP
 4. A stable highspeed internetconnection with a fixed IP address
 5. Know your way around your router OR learn how to
@@ -199,7 +199,7 @@ Check the blockcount and check if its the same at https://chainz.cryptoid.info/d
 15. Linking it to your local wallet on your desktop pc.
 32. We are now gonna make a private key so your masternode and local wallet can talk to eachother:
 loonie-cli masternode genkey
-NOTE: Dont worry, this is not a key to get to your 10000 loonie. They are still safe in your local wallet protected with its own privatekey.
+NOTE: Dont worry, this is not a key to get to your 50000 loonie. They are still safe in your local wallet protected with its own privatekey.
 Select the generated string with your mouse. You dont need to copy it. Dragging mouse copies it automaticly.
 Stop the the masternode and enter the hidden .Loonie directory again and edit the configfile:
 loonie-cli stop
@@ -223,6 +223,6 @@ loonie-cli masternode list | grep collateral_output_txid
 Check if your ip is red and the line ends with a 1 like: "YOUREXTERNALIPADDRESS:33447" : 1. Then you know its connectes and seen on the network.
 CONGRATS SO FAR! THE HARD WORK IS DONE! 
 for currently configuring the masternode please read also the masternodeguides of cryptonid or ask on the Loonie *Slack forum for support.
-collateral_output_txid      is the transaction id of the transaction where the 10000 LNI deposit sended to your masternode wallet
+collateral_output_txid      is the transaction id of the transaction where the 50000 LNI deposit sended to your masternode wallet
 collateral_output_index     is the index of the deposit transaction
 
