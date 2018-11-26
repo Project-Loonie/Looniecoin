@@ -9,7 +9,7 @@
 #include "chainparams.h"
 
 
-// Bootup the Masternode, look for a 10000 LNI input and register on the network
+// Bootup the Masternode, look for a 50000 LNI input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
