@@ -1626,58 +1626,50 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    //Loonie Testnet
-	if (Params().NetworkID() == CBaseChainParams::TESTNET) 
-	{
-        if (nHeight < 200 && nHeight > 0)
-            return 250000 * COIN;
+    if (nHeight == 0) {
+        return 40000000 * COIN; //40M premine
+    } else if (nHeight <= 1000) { // end of swap period
+        return 0.001 * COIN;        
+    } else if (nHeight <= 30000) { 
+        return 30 * COIN;
+    } else if (nHeight <= 555602) { 
+        return 50 * COIN;
+    } else if (nHeight <= 1081203) { 
+        return 50 * COIN;
+    } else if (nHeight <= 1606804) {
+        return 40 * COIN;
+    } else if (nHeight <= 2132405) { 
+        return 30 * COIN;
+    } else if (nHeight <= 2658006) { 
+        return 20 * COIN;
+    } else if (nHeight <= 3183607) { 
+        return 10 * COIN;
+    } else if (nHeight <= 3709208) {
+        return 5 * COIN;
+    } else {
+        return 0.001 * COIN;
     }
-	//Loonie Mainet
-	int64_t pow_basicreward = 0.1563 * COIN;
-	int64_t nSubsidy = 2.35 * COIN;
-	int64_t var1 = 320000; //Stage 2
-	int64_t var2 = 360000; //Stage 3
-	if( nHeight == 0 ) nSubsidy = (2428500 * COIN);
-	// Snapshotbalance from block 2366375 and 15 x ghoastnode (150K)
-	if( nHeight <= 4480 ) nSubsidy = nSubsidy / 100 ;
-	if( nHeight > 115200 && nHeight <= 130000 )	nSubsidy = nSubsidy - ((nHeight - 115200 )/var1)*COIN;
-	if( nHeight > 130000 && nHeight <= 691200 )
-        {
-		//Stage 2
-		//Fix
-		nSubsidy = nSubsidy - (((nHeight * COIN) - (115200 *COIN))/var1);
-		//LogPrintf("nSubsidy No 2 %s nHeight: %d \n",nSubsidy, nHeight);
-		}
-	if( nHeight > 691200 && nHeight <= 2284800 )
-        {
-		//Stage 3
-		nSubsidy = (var2 * COIN) / nHeight;
-        /*
-		Old
-		nSubsidy = (var2 / nHeight)*COIN;
-		int64_t nSubsidy4 = nSubsidy;
-		nSubsidy4 = (var2 * COIN) / (nHeight+600000);
-		LogPrintf("Stage 2 nSubsidy No 4 %s nHeight: %d \n",nSubsidy4,(nHeight+600000));
-		*/
-		}
-	if( nHeight > 2284800 )
-		{
-		nSubsidy = pow_basicreward;
-		}
-    return nSubsidy;
-	
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
     int64_t ret = 0;
-
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200)
-            return 0;
+    if (nHeight <= 3000) {
+    ret = blockValue * 0.4; // 40% of rewards to MN
     }
-	// Loonie 65% for Masternodes
-	ret = blockValue  / 100 * 65;
+    else if (nHeight <= 10000) {
+    ret = blockValue * 0.5; // 50% of rewards to MN
+    }
+    else if (nHeight <= 100000) {
+    ret = blockValue * 0.6; // 60% of rewards to MN
+    }
+    else if (nHeight <= 150000) {
+    ret = blockValue * 0.7; // 70% of rewards to MN
+    }
+    else {
+    ret = blockValue * 0.8; // 80% of rewards to MN
+    }
+
     return ret;
 }
 
